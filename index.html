@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Pigułka CSS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,900&amp;subset=latin-ext" rel="stylesheet" />
+    <!-- Shower Theme -->
+    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x9.css" />
+    <link rel="stylesheet" href="vendors/shower-CezaryWalenciuk/styles/main.css" />
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="vendors/prism/prism.css" />
+    <link rel="stylesheet" href="vendors/prism/custom-prism.css" />
+    <link rel="stylesheet" href="codegrid.css" />
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Pigułka CSS</h1>
+        <p></p>
+    </header>
+
+    <section class="slide front-page">
+
+        <div class="details">
+            <!-- 1. Avatar -->
+
+
+            <h2>Cezary Walenciuk</h2>
+
+            <!-- 3. Presentation title -->
+            <h2 class="bigbig"><strong style="font-size: 35px;  line-height: 1.3;">
+
+                    <span class="titlec1">Pigułka </span>
+                    <span class="">CSS</span></strong></h2>
+
+
+
+            <!-- 5. Contact the speaker -->
+            <h2><a href="https://twitter.com/WalenciukC">@walenciukC</a></h2>
+        </div>
+        <div>
+
+
+            <!-- 2. Speaker -->
+
+        </div>
+        <div class="imag">
+            <img src="images/my-avatar.jpg" alt="Speaker">
+        </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/01.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/04.jpg" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/05.png" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Czy pisanie styli CSS jest trudne?
+        </span>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Czy potrzebujesz</h2>
+        <ol>
+            <li class="next">Gotowe frameworki jak bootstrap, bulma</li>
+            <li class="next">LESS czy SASS</li>
+            <li class="next">CSS in JS</li>
+        </ol>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Przygtowanie strony dla różnych urządzeń
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Różne style dla wielkości ekranu</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 22px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 22px !important;">
+                        body {
+                          background-color: yellow;
+                        }
+                        
+                        @media screen and (max-width: 992px) {
+                          body {
+                            background-color: blue;
+                          }
+                        }
+
+                        @media screen and (max-width: 600px) {
+                          body {
+                            background-color: green;
+                          }
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/00.png" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section> 
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/02.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/03.gif" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section>
+   
+    <section class="slide small grey  compact">
+        <h2>Agenda</h2>
+        <ol>
+            <li class="next">Quiz z podstaw CSS</li>
+            <li class="next">Jak wygląda CSS w 2020 roku, czyli jak świeżą masz wiedzę</li>
+            <li class="next">Błędy</li>
+            <li class="next">Grid</li>
+            <li class="next">FlexBox</li>
+            <li class="next">Odlotowe właściwości</li>
+        </ol>
+    </section>
+
+    <section class="slide greenmemory">
+        <span class="shout colors">Quiz z podstaw CSS. Pierwsza runda
+        </span>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Która właściwość zmienia czionkę danego elementu</h2>
+        <ol>
+            <li class="next">font-weight</li>
+            <li class="next">font-style</li>
+            <li class="next">font-family</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Który tag w HTML tworzy listę numerowaną</h2>
+        <ol>
+            <li class="next">A : OL</li>
+            <li class="next">B : OT</li>
+            <li class="next">C : Żadne z tych</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Która z tych atrybutów nie jest poprawny</h2>
+        <ol>
+            <li class="next">A: font-style: oblique;</li>
+            <li class="next">B: font-align: center;</li>
+            <li class="next">C: font-weight: lighter;</li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden; margin-top: -94px;;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;Nie to&#x3C;/div&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;  " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>1: Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+     
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px; ;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;Nie to&#x3C;/div&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;   " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>1: Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+                <pre style="font-size: 43px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                class="language-javascript">
+                    <code style="margin-left: 0px;">B</code>
+                </pre>
+            </div>
+          </div>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Co się tutaj dzieje?</h2>
+        <ol>
+            <li class="next">div > span : Wybiera każdy element span, który jest dzieckiem div</li>
+            <li class="next">div + span : Wybiera pierwszy element span po każdym div-ie</li>
+            <li class="next">div ~ span : Wybiera wszystkie elementy span po każdym div-ie </li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden; margin-top: -94px;;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;
+                            &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                            &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;/div&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;  " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>2: Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+     
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden; margin-top: -94px;;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;
+                            &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                            &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;/div&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;  " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>2: Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+                <pre style="font-size: 43px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                class="language-javascript">
+                    <code style="margin-left: 0px;">A</code>
+                </pre>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden; margin-top: -94px;;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;&#x3C;/div&#x3E;
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;  " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>3 : Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 43px;overflow: hidden; margin-top: -94px;;  " class="language-html ">
+                    <code style="line-height: 43px !important;">
+                        &#x3C;span&#x3E;Nie to&#x3C;/span&#x3E;
+                        &#x3C;div&#x3E;&#x3C;/div&#x3E;
+                        &#x3C;p&#x3E; Nie to &#x3C;/p&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                        &#x3C;span&#x3E;TO TO&#x3C;/span&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;  " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: div > span
+                        B: div + span
+                        C: div ~ span
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>3 : Która kombinacja selektorów będzie kierować tylko na element "TO TO"?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+                <pre style="font-size: 43px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                class="language-javascript">
+                    <code style="margin-left: 0px;">C</code>
+                </pre>
+            </div>
+          </div>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">CSS Quiz. Runda 2
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 28px;overflow: hidden;margin-top: -74px; ;  " class="language-html ">
+                    <code style="line-height: 28px !important;">
+                        &#x3C;style&#x3E; 
+                        body { 
+                           font-size : 20px;
+                        }
+                        
+                        h1 { 
+                           font-size : 1.5em;
+                        }
+                        &#x3C;/style&#x3E;
+                        
+                        &#x3C;h1&#x3E; Titile &#x3C;/h1&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;   " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: 1.5 px
+                        B: 25 px
+                        C: 30 px
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>Jaki będzie rozmiar czcionki elementu h1 w pikselach?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+
+            </div>
+          </div>
+    </section>
+
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 28px;overflow: hidden;margin-top: -74px; ;  " class="language-html ">
+                    <code style="line-height: 28px !important;">
+                        &#x3C;style&#x3E; 
+                        body { 
+                           font-size : 20px;
+                        }
+                        
+                        h1 { 
+                           font-size : 1.5em;
+                        }
+                        &#x3C;/style&#x3E;
+                        
+                        &#x3C;h1&#x3E; Titile &#x3C;/h1&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;   " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A: 1.5 px
+                        B: 25 px
+                        C: 30 px
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>Jaki będzie rozmiar czcionki elementu h1 w pikselach?</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+                <pre style="font-size: 43px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                class="language-javascript">
+                    <code style="margin-left: 0px;">C</code>
+                </pre>
+            </div>
+          </div>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Jakie mamy rozmiary w CSS?</h2>
+        <ol>
+            <li class="next">px - piksele</li>
+            <li class="next">in - cale : 1in == 96px</li>
+            <li class="next">cm - centymetry : 1cm == 37.8px </li>
+            <li class="next">mm - milimetry 1mm == 0.1cm == 3.78px</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Rozmiary dla czionek : em</h2>
+        <ol>
+            <li class="next">em - bazuje na wielkości litery M</li>
+            <li class="next">1em == 16px == 0.17in == 12pt == 1pc == 4.2mm == 0.42cm</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Jakie mamy rozmiary w CSS?</h2>
+        <ol>
+            <li class="next">%</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>vw,vh : viewport</h2>
+        <ol>
+            <li class="next">1 vw jest równy 1% długości ekranu</li>
+            <li class="next">1 vh jest równy 1% wysokości ekranu</li>
+            <li class="next">1 vmin jest równy 1% najmniejszej mierze ekranu</li>
+            <li class="next">1 vmax jest równy 1% najmniejszej mierze ekranu</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>viewport : Po co?</h2>
+        <ol>
+            <li class="next">Responsive Typography</li>
+            <li class="next"> <a href="https://codepen.io/Crezber/pen/vYGEpPR">https://codepen.io/Crezber/pen/vYGEpPR</a></li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>REM</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 28px !important;">
+                        html {
+                            font-size: 14px;
+                        }
+                        div {
+                            font-size: 1.2rem;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">CSS Quiz. 3 Runda
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 38px;overflow: hidden;margin-top: -74px; ;  " class="language-html ">
+                    <code style="line-height: 38px !important;">
+                        &#x3C;ul&#x3E; 
+                            &#x3C;li&#x3E; Jest Tu... &#x3C;/li&#x3E; 
+                            &#x3C;li&#x3E; I to też... &#x3C;/li&#x3E; 
+                            &#x3C;li&#x3E; Również... &#x3C;/li&#x3E; 
+                        &#x3C;/ul&#x3E; 
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;   " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A. ul li:last-child
+                        B. ul:last-child li
+                        C. ul:last-child( li )
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>Który selektor obsłuży ostatni element listy</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="module-grid-container">
+            <div class="module-CodeModule">
+                <pre style="font-size: 38px;overflow: hidden;margin-top: -74px; ;  " class="language-html ">
+                    <code style="line-height: 38px !important;">
+                        &#x3C;ul&#x3E; 
+                            &#x3C;li&#x3E; Jest Tu... &#x3C;/li&#x3E; 
+                            &#x3C;li&#x3E; I to też... &#x3C;/li&#x3E; 
+                            &#x3C;li&#x3E; Również... &#x3C;/li&#x3E; 
+                        &#x3C;/ul&#x3E; 
+                    </code>
+                </pre>
+            </div>
+            <div class="    module-CodeMain">
+                <pre style="font-size: 43px;overflow: hidden;margin-top: -94px;   " class="language-css ">
+                    <code style="line-height: 43px !important;">
+                        /* Wybierz jeden */
+                        A. ul li:last-child
+                        B. ul:last-child li
+                        C. ul:last-child( li )
+                    </code>
+                </pre>
+            </div>
+        
+            <div class="module-HeaderText"><h2>Który selektor obsłuży ostatni element listy</h2></div>
+            <div class="module-Question"><h3>💡 Co jest poprawną odpowiedzią?</h3></div>
+            <div class="module-Answer">
+                <pre style="font-size: 43px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                class="language-javascript">
+                    <code style="margin-left: 0px;">A</code>
+                </pre>
+            </div>
+          </div>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">Z-indeks
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Z-indeks</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 58px;overflow: hidden;  " class="language-javascript ">
+                    <code style="line-height: 58px !important;">
+                        .element {
+                            z-index: 99999;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Dlaczego to nie działa ?</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Z-indekx</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 58px;overflow: hidden;  " class="language-javascript ">
+                    <code style="line-height: 58px !important;">
+                        .element {
+                            z-index: 99999;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Dlaczego to nie działa ?</h3>
+                </div>
+                <div class="odpowiedz">
+                    <pre style="font-size: 21px; line-height: 0px;; overflow: hidden; background-color: whitesmoke;; "
+                    class="language-javascript">
+                        <code style="margin-left: -15em;">
+                            Bez właściwości "position", ta właściwość nie działa.
+                            <br />
+                            Ignoruje static
+                        </code>
+                    </pre>
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Z-index</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 17px;overflow: hidden;  " class="language-html ">
+                    <code style="line-height: 17px !important;">
+                        &#x3C;style&#x3E;
+                            .content { 
+                                position: relative; 
+                                z-index: 1; 
+                            } 
+                            
+                            .modal { 
+                                position: fixed; 
+                                z-index: 100; 
+                            } 
+                            
+                            .side-tab { 
+                                position: fixed; 
+                                z-index: 5; 
+                            }
+                         &#x3C;/style&#x3E;
+
+                         &#x3C;section class=&#x22;content&#x22;&#x3E;
+                            &#x3C;div class=&#x22;modal&#x22;&#x3E;&#x3C;/div&#x3E;
+                         &#x3C;/section&#x3E;
+                         &#x3C;div class=&#x22;side-tab&#x22;&#x3E;&#x3C;/div&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Tak lepiej ?: </h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="slide greenmemory">
+        <span class="shout colors">CSS w 2020
+        </span>
+    </section>
+    <section class="slide grey  compact">
+        <h2>O czym później</h2>
+        <ol>
+            <li class="next">Grid</li>
+            <li class="next">FlexBox</li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Zmienne</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 36px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 36px !important;">
+
+                        :root {
+                            --color-js:green;
+                            --color-css: #690;
+                            --color-blue: rgb(0, 183, 255);
+                        }
+
+                        .headerCODE {
+                            color: var(--color-css);
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Super sprawa nie potrzebujesz LESS czy SASS?</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Sprawdzenie wsparcia</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 58px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 58px !important;">
+
+                        @supports (display: grid) {
+                            div {
+                            display: grid;
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Media Queries</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 27px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 27px !important;">
+
+                        @media (max-width: 20em) {}
+                        @media (min-width: 20em) and (max-width: 35em) {}
+
+                        @media (20em <= width <=35em) {}
+
+                        @media (pointer:coarse) {
+                            /* CSS rules for touch screen */
+                        }
+
+                        @media (hover) {
+                            /* CSS rules useful to people with devices 
+                            that have hover support */
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Coraz więcej opcji</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Pierwsza litera</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 28px !important;">
+
+                        p::first-letter {
+                            font-size: 30px;
+                            color: Black;
+                            font-family: Arial;
+                            font-weight: bold;
+                        }
+
+                        h1+p::first-letter {
+                            font-weight: bold;
+                            -webkit-initial-letter: 4 3;
+                            initial-letter: 4 3;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Jak ostylować pierwszą literę</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Font-variation-settings</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 25px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 25px !important;">
+
+                        @supports (font-variation-settings: 'wdth' 200) {
+                            @font-face {
+                              /* https://github.com/TypeNetwork/Amstelvar */
+                              font-family: AmstelvarAlpha;
+                              src: url('../fonts/AmstelvarAlpha-VF.ttf');
+                              font-weight: normal;
+                              font-style: normal;
+                            }
+                          
+                            #font-amstelvar {
+                              font-family: AmstelvarAlpha;
+                              font-variation-settings: 'wdth' 400, 'wght' 98;
+                            }
+                          }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Font-variation-settings</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Scroll Snaping</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 18px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 18px !important;">
+                        ul {
+                            list-style: none;
+                            border: 5px solid rgb(126,63,222);
+                            border-radius: .5em;
+                            height: 300px;
+                            padding: 0;
+                            overflow-y: scroll;
+                            scroll-snap-type: y mandatory;
+                            
+                        }
+                          
+                        li {
+                            background-color: rgba(126,63,222,.3);
+                            padding: 40px 20px ;
+                            border-bottom: 1px solid rgb(126,63,222);
+                            min-height: 150px;
+                            scroll-snap-align: start;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Scroll Snaping</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Calc
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Calc</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 28px !important;">
+                        .el {
+                            font-size: calc(3vw + 2px);
+                            width:     calc(100% - 20px);
+                            height:    calc(100vh - 20px);
+                            padding:   calc(1vw + 5px);
+                          }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>💡 Super sprawa nie potrzebujesz LESS czy SASS?</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Calc</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 28px !important;">
+                        .el {
+                            background: #1E88E5 linear-gradient(
+                              to bottom,
+                              #1E88E5,
+                              #1E88E5 calc(50% - 10px),
+                              #3949AB calc(50% + 10px),
+                              #3949AB
+                            );
+                         }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Calc</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 28px !important;">
+                        [data-columns="7"] .col { width: calc(100% / 7); }
+                        [data-columns="6"] .col { width: calc(100% / 6); }
+                        [data-columns="5"] .col { width: calc(100% / 5); }
+                        [data-columns="4"] .col { width: calc(100% / 4); }
+                        [data-columns="3"] .col { width: calc(100% / 3); }
+                        [data-columns="2"] .col { width: calc(100% / 2); }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Min i Max</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css ">
+                    <code style="line-height: 38px !important;">
+                        html {
+                            font-size: min(max(1rem, 4vw), 22px);
+                        }
+
+                        body {
+                            font-size: clamp(100%, 1rem + 2vw, 24px);
+                          } 
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Już niedługo w każdej przeglądarce</h3>
+                </div>
+                <div class="odpowiedz">
+                    clamp, min, max
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">Błędy w CSS
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">1. Ściganie doskonałość we wszystkim
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">2. Śledzenie DOM w CSS
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Śledzenie DOM w CSS</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 19px;overflow: hidden;  " class="language-html">
+                    <code style="line-height: 19px !important;">
+
+                      &#x3C;body&#x3E;
+                        &#x3C;div class=&#x22;container&#x22;&#x3E;
+                          &#x3C;div class=&#x22;main-content&#x22;&#x3E;
+                            &#x3C;div class=&#x22;blog-row&#x22;&#x3E;
+                              &#x3C;div class=&#x22;blog-col&#x22;&#x3E;
+                                &#x3C;section&#x3E;
+                                  &#x3C;article&#x3E;
+                                    &#x3C;a href=&#x22;#&#x22;&#x3E;This link is not bold&#x3C;/a&#x3E;
+                                    &#x3C;p&#x3E;&#x3C;a href=&#x22;#&#x22; class=&#x22;bold&#x22;&#x3E;This link is bold&#x3C;/a&#x3E;&#x3C;/p&#x3E;
+                                  &#x3C;/article&#x3E;
+                                &#x3C;/section&#x3E;
+                                &#x3C;section&#x3E;
+                                  &#x3C;a href=&#x22;#&#x22;&#x3E;This link is not bold&#x3C;/a&#x3E;
+                                &#x3C;/section&#x3E;
+                              &#x3C;/div&#x3E;
+                            &#x3C;/div&#x3E;
+                          &#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                      &#x3C;/body&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Śledzenie DOM w CSS</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 38px !important;">
+                        body .container .main-content .blog-row 
+                        .blog-col section article p a {
+
+                            font-weight: bold;
+
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>🚫 Lepiej tak nie robić</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Śledzenie DOM w CSS</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 43px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 43px !important;">
+                        .bold {
+
+                            font-weight: bold;
+                            
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>✅ Tak lepiej</h3>
+                </div>
+                <div class="odpowiedz">
+                    Ta strategia pozwala też uniknąć !important
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">3. Używanie px jako jednostki
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Używanie px jako jednostki</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 38px !important;">
+                        p {
+                            font-size: 16px;
+                            line-height: 20px;
+                            margin-bottom: 8px;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>🚫 Lepiej tak nie robić</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Używanie px jako jednostki</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 28px !important;">
+                        body {
+                            font-size: 16px;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            line-height: 1.25;
+                            margin-bottom: 0.5em;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>✅ Poprawnie</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Używanie px jako jednostki</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 28px !important;">
+
+                        &#x3C;div class=&#x22;container&#x22;&#x3E;
+                            &#x3C;div class=&#x22;child_inside_container&#x22;&#x3E;&#x3C;/div&#x3E;
+                        &#x3C;/div&#x3E;
+                        
+                        .container {
+                            font-size: 20px;
+                        }
+                        
+                        .child_inside_container {
+                            width: 3em;
+                        }
+                        
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>✅ Poprawnie</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+
+    <section class="slide dosblue">
+        <span class="shout colors">4. Dokładna analiza rozwiązań. Co łamie przypływ dokumentu
+        </span>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Jak można wyśrodkować horyzontalnie element HTML</h2>
+        <ol>
+            <li class="next">Użycie &#x26;nbsp; , aż element będzie na środku</li>
+            <li class="next">Ustawienie "width" i "margin-left" tak, aby element wydawał sie na środku</li>
+            <li class="next">Użycie "text-align: center"</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Jak można wyśrodkować horyzontalnie element HTML</h2>
+        <ol>
+            <li class="next">Użycie "margin: 0 auto"</li>
+            <li class="next">Kombinacja "float" i "clearfix:both"</li>
+            <li class="next">Użycie kombinacji : position, left i transform</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Czego nie chcemy. Analiza</h2>
+        <ol>
+            <li class="next">&#x26;nbsp; i "width" z "margin-left. Odpada</li>
+            <li class="next">text-align: center działa tylko dla "display:inline"</li>
+            <li class="next">margin: 0 auto działa tylko dla "display:block"</li>
+        </ol>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Czego nie chcemy. Analiza</h2>
+        <ol>
+            <li class="next">Najgorszy jest "float"</li>
+        </ol>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">5. Projektowanie najpierw na komputer czy na telefon?
+        </span>
+    </section>
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/05.jpg" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section> 
+    <section class="slide" style="background-color:black">
+        <figure>
+            <img class="cover" src="pictures/07.png" alt="blog">
+            <figcaption class="white">Copyright © Cezary Walenciuk</figcaption>
+        </figure>
+    </section> 
+    <section class="slide dosblue">
+        <span class="shout colors">6. Brak schematu nazewnictwa
+        </span>
+    </section>
+    <section class="slide grey  compact">
+        <h2>Nazewnictwo</h2>
+        <ol>
+            <li class="next">.img, .image, .blog-img, .img-blog, .blog-image, .blog-img</li>
+            <li class="next">.center, .centre, .centered, .text-center, .align-center</li>
+        </ol>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>BEM</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 21px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 21px !important;">
+
+                        .button {
+                            display: inline-block;
+                            border-radius: 3px;
+                            padding: 7px 12px;
+                            border: 1px solid #D5D5D5;
+                            background-image: linear-gradient(#EEE, #DDD);
+                            font: 700 13px/18px Helvetica, arial;
+                        }
+
+                        .button--state-success {
+                            color: #FFF;
+                            background: #569E3D linear-gradient(#79D858, #569E3D) repeat-x;
+                            border-color: #4A993E;
+                        }
+
+                        .button--state-danger {
+                            color: #900;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Przykład BEM</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">7. Brak czcionek zastępczych
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Brak czcionek zastępczych</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 38px !important;">
+                        .selector {
+                            font-family: Helvetica, Arial, sans-serif;
+                        }
+
+                        .selector2 {
+                            font-family: Helvetica;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3></h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">8. Używanie jednego pliku CSS
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Używanie jednego pliku CSS?</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 41px !important;">
+                        @import url("reset.css");
+                        @import url("ie.css");
+                        @import url("typography.css");
+                        @import url("layout.css");
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Używanie jednego pliku CSS</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">9. Style wzajemnie się wykluczają
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Style wzajemnie się wykluczają</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 32px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 32px !important;">
+                        h2{
+                            font-size:2em;
+                            margin-bottom:0.5em;
+                            padding-bottom:0.5em;
+                            border-bottom:1px solid #ccc;
+                        }
+                        .no-border{
+                            padding-bottom:0;
+                            border-bottom:none;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Style wzajemnie się wykluczają</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Style wzajemnie się wykluczają. Tak lepiej?</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 32px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 32px !important;">
+                        h2 {
+                            font-size:2em;
+                            margin-bottom:0.5em;
+                        }
+
+                        .headline{
+                            padding-bottom:0.5em;
+                            border-bottom:1px solid #ccc;
+                        }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Style wzajemnie się wykluczają. Tak lepiej?</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">10. Powtarzanie się styli
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Powtarzanie się styli</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 28px !important;">
+                        .some-title { font-weight: bold; }
+                        .some-other-title { font-weight: bold; color: red }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Powtarzanie się styli</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Powtarzanie się styli</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 28px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 28px !important;">
+                        .some-title, .some-other-title { font-weight: bold; }
+                        .some-other-title { color: red; }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Powtarzanie się styli</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">11. Używanie ID
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Używanie ID</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 38px;overflow: hidden;  " class="language-css">
+                    <code style="line-height: 41px !important;">
+                        #my-link { color: red; }
+                        .my-link { color: green; }
+                        a { color: blue; }
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Używanie ID</h3>
+                </div>
+                <div class="odpowiedz">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">Czy pisanie styli CSS jest trudne?
+        </span>
+    </section>
+    <section class="slide greenmemory">
+        <span class="shout colors">Jak to jest z tym layout-em
+        </span>
+    </section>
+    <section class="slide prism over bhgry">
+        <div class="grid-container">
+            <div class="HeaderTitle">
+                <h2>Pamiętasz tabelki przed 2006</h2>
+            </div>
+            <div class="PlaceCodeHere">
+                <pre style="font-size: 12px;overflow: hidden;  " class="language-html">
+                    <code style="line-height: 12px !important;">
+                        &#x3C;body style=&#x22;margin:0px;&#x22;&#x3E;
+                        &#x3C;table style=&#x22;width:100%; border-collapse:collapse; font:14px Arial,sans-serif;&#x22;&#x3E;
+                            &#x3C;tr&#x3E;
+                                &#x3C;td colspan=&#x22;2&#x22; style=&#x22;padding:10px 20px; background-color:#acb3b9;&#x22;&#x3E;
+                                    &#x3C;h1 style=&#x22;font-size:24px;&#x22;&#x3E;M&#xF3;j skromny blog&#x3C;/h1&#x3E;
+                                &#x3C;/td&#x3E;
+                            &#x3C;/tr&#x3E;
+                            &#x3C;tr style=&#x22;height:170px;&#x22;&#x3E;
+                                &#x3C;td style=&#x22;width:20%; padding:20px; background-color:#d4d7dc; vertical-align: top;&#x22;&#x3E;
+                                    &#x3C;ul style=&#x22;list-style:none; padding:0px; line-height:24px;&#x22;&#x3E;
+                                        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; style=&#x22;color:#333;&#x22;&#x3E;Start&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; style=&#x22;color:#333;&#x22;&#x3E;O mnie&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                        &#x3C;li&#x3E;&#x3C;a href=&#x22;#&#x22; style=&#x22;color:#333;&#x22;&#x3E;Kontakt&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                                    &#x3C;/ul&#x3E;
+                                &#x3C;/td&#x3E;
+                                &#x3C;td style=&#x22;padding:20px; background-color:#f2f2f2; vertical-align:top;&#x22;&#x3E;
+                                    &#x3C;h2&#x3E;Witaj na stronie&#x3C;/h2&#x3E;
+                                    &#x3C;p&#x3E;Here you will learn how to create websites...
+                                      &#x3C;br/&#x3E;          
+                                      &#x3C;br/&#x3E;          
+                                      &#x3C;br/&#x3E;
+                                  &#x3C;/p&#x3E;
+                                &#x3C;/td&#x3E;
+                            &#x3C;/tr&#x3E;
+                            &#x3C;tr&#x3E;
+                                &#x3C;td colspan=&#x22;2&#x22; style=&#x22;padding:5px; background-color:#acb3b9; text-align:center;&#x22;&#x3E;
+                                    &#x3C;p&#x3E;copyright &#x26;copy; cezarywaleciuk.pl&#x3C;/p&#x3E;
+                                &#x3C;/td&#x3E;
+                            &#x3C;/tr&#x3E;
+                        &#x3C;/table&#x3E;
+                        &#x3C;/body&#x3E;
+                    </code>
+                </pre>
+            </div>
+            <div class="AnswerCode">
+                <div class="pytanie">
+                    <h3>Pamiętasz używanie tabelek jako layoutu. </h3>
+                </div>
+                <div class="odpowiedz">
+                    To znaczy, że masz zapewne ponad 30 lat
+                    <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/XWdbpjq?editors=1000">kod</a>
+                </div>
+            </div>
+          </div>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Float i clearfix
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/bGpdgag">https://codepen.io/Crezber/pen/bGpdgag</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Grid, jest niesamowity
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            Generator Grid
+            <a style="font-size: 50%;" href="https://grid.layoutit.com/">https://grid.layoutit.com/</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            Layout z Grid
+            <a style="font-size: 50%;" href="https://codepen.io/MSEdgeDev/pen/mMQqZX">https://codepen.io/MSEdgeDev/pen/mMQqZX</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">FlexBox
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">Jak centrowanie w pionie
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            FlexBox przykład 1
+            <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/vYGOxGy">https://codepen.io/Crezber/pen/vYGOxGy</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            FlexBox przykład 2
+            <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/bGpdqqv">https://codepen.io/Crezber/pen/bGpdqqv</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            FlexBox CheatSheet
+            <a style="font-size: 50%;" href="https://yoksel.github.io/flex-cheatsheet/"> https://yoksel.github.io/flex-cheatsheet/</a>
+        </span>
+    </section>
+   
+    <section class="slide greenmemory">
+        <span class="shout colors">Odlotowe właściwości
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            Przezroczysty pasek
+            <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/zYqGNQb">https://codepen.io/Crezber/pen/zYqGNQb</a>
+        </span>
+    </section>
+    <section class="slide dosblue">
+        <span class="shout colors">
+            Odlotowy guzik
+            <a style="font-size: 50%;" href="https://codepen.io/Crezber/pen/mdPJWJR">https://codepen.io/Crezber/pen/mdPJWJR</a>
+        </span>
+    </section>
+
+    <!-- <div class="progress"></div> -->
+    <footer class="badge badge-top-left">
+        <a href="#" class="fullscreen">Fullscreen</a>
+    </footer>
+
+    <script src="vendors/gamepad/gamepad.js"></script>
+    <script src="vendors/shower/shower.min.js"></script>
+    <script src="vendors/shower-gamepad/shower.gamepad.js"></script>
+    <script src="vendors/shower-warsawjs/scripts/fullscreen.js"></script>
+
+    <!-- Prism.js -->
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/prism/custom-prism.js"></script>
+    <script language="javascript">
+        // var pre_elements = document.getElementsByTagName('pre');
+
+        // for (var i = 0; i < pre_elements.length; i++)
+        // {
+        //     var content = pre_elements[i].innerHTML;
+
+        //     var tabs_to_remove = '';
+        //     while (content.indexOf('\t') == '0')
+        //     {
+        //       tabs_to_remove += '\t';
+        //       content = content.substring(1);
+        //     }
+
+        //     var re = new RegExp('\n' + tabs_to_remove, 'g');
+        //     content = content.replace(re, '\n');
+        //     pre_elements[i].outerHTML = '<pre class="language-csharp">' + content + '</pre>';
+        // }
+    </script>
+</body>
+
+</html>
